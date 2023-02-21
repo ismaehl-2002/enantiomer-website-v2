@@ -9,15 +9,24 @@
       #banner{
         height: 360px;
         width: 100%;
+        object: fitcover cover;
+        margin-bottom: 16px;
       }
     </style>
   </head>
     <body>
+      {% include 'nav.html' %}
+        <img class="img-fluid" id = "banner" src = "https://enantiomer-website.ismaehl.repl.co/static/img1.jpg">
       <div class="container">
    <h1 class="text-center mt-2 mb-4">Enantiomer</h1>
-      <img class="img-fluid" id = "banner" src = "https://enantiomer-website.ismaehl.repl.co/static/img1.jpg">
-      <h2 class="text-center mt-2 mb-4"> About Enantiomers</h2>
+        <div class="row" style="margin-bottom:16px;">
+          <div class="col-md-6">
       <p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+          </div>
+          <div class ="d-none d-md-block col-6">
+        <img src="/static/enan_emp.jpg" style="height:320px; border-radius:4px;">
+        </div>
+        </div>
       <h2 class="text-center mt-2 mb-4">Placement Opportunites</h2>
         <p>
            {% for job in jobs %}
@@ -25,7 +34,7 @@
            {% endfor %}
         </p>
         <div class ="text-center">
-      <button class="btn btn-primary btn-lg">Contact us</button>
-          <p class="mt-4">Copyright 2023, Enantiomer</p>
+      <a class="btn btn-primary btn-lg" href="mailto:ismailchaudhary2002@gmail.com?subject=question%20about%20job%20opening&body=My%20name%20%3A%3Cyour%20name%20here%3E%0D%0AMy%20Question%3A%20%3CQuestion%3E%0D%0A">Contact us</a>
+          {% include 'footer.html' %}
     </body>
 </html>
